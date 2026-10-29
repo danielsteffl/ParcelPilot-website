@@ -1,11 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ParcelPilot</title>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    
+    <!-- Header & Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <img src="./images/icons/transparent_red_secondarylogo.svg" alt="primary-logo">
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="nav-links">
+                    <a href="#" class="nav-link">Kde je moje zásilka</a>
+                    <a href="#" class="nav-link">Zákaznická podpora</a>
+                    <a href="#" class="btn-brand">
+                        <span>Stáhnout aplikaci</span>
+                    </a>
+                    <button class="btn-profile" title="Uživatelský účet">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Controls -->
+                <div class="mobile-controls">
+                    <a href="#" class="btn-brand mobile-brand-btn">Stáhnout aplikaci</a>
+                    <button id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-label="Open menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <a href="#" class="nav-link">Kde je moje zásilka</a>
+                <a href="#" class="nav-link">Zákaznická podpora</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                
+                <div>
+                    <h1>Logistika bez hranic. <span>Rychle a spolehlivě.</span></h1>
+                    <p>Objevte <a href="#o-nas">ParcelPilot</a> – moderní logistickou platformu, která propojuje vaše zásilky se světem. Rychlé doručení, chytré sledování a maximální péče na jednom místě.</p>
+                    <div class="hero-btn-group">
+                        <a href="#kalkulacka" class="btn btn-primary">Spočítat cenu zásilky</a>
+                        <a href="#sluzby" class="btn btn-secondary">Prozkoumat služby</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tracking-card" id="sledovani">
+                        <div class="tracking-header-wrap">
+                            <div>
+                                <h3>Sledování zásilky</h3>
+                                <p class="tracking-subtitle">Zadejte číslo svého balíku</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tracking-input-group">
+                            <input type="text" id="trackingInput" placeholder="např. PP 123 456 CZ" />
+                            <button class="btn btn-primary" id="trackBtn">Hledat</button>
+                        </div>
+                        
+                        <div class="sample-hints-wrapper">
+                            Vyzkoušet z ukázky: 
+                            <span class="sample-tag">PP-1001-CZ</span>
+                            <span class="sample-tag">PP-2002-CZ</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="hero-mini-stats">
+                        <div class="mini-stat-item">
+                            <svg class="mini-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <div class="mini-stat-info">
+                                <strong>1000 +</strong>
+                                <span>Výdejních míst v ČR</span>
+                            </div>
+                        </div>
+                        <div class="mini-stat-item">
+                            <svg class="mini-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            <div class="mini-stat-info">
+                                <strong>98 %</strong>
+                                <span>Doručení do druhého dne</span>
+                            </div>
+                        </div>
+                        <div class="mini-stat-item">
+                            <svg class="mini-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            <div class="mini-stat-info">
+                                <strong>6 789</strong>
+                                <span>Samoobslužných Boxů v ČR</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
