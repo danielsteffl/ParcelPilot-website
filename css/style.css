@@ -1,4 +1,4 @@
-/* CSS Reset & Variables */
+/* === ROOT === */
 :root {
     --brand-color-red: #D0192E;
     --brand-color-black: #111111;
@@ -6,6 +6,8 @@
 
     --red-primary-dark: #aa1526;
     --red-primary: #D0192E;
+    --red-primary-light: #fdf2f2;
+
     --text-dark: #111111;
     --text-muted: #4B5563;
     --border-color: #E5E7EB;
@@ -15,8 +17,14 @@
     --shadow-lg: 0 12px 30px -8px rgba(0, 0, 0, 0.08), 0 4px 12px -4px rgba(0, 0, 0, 0.03);
     --transition: all 0.2s ease-in-out;
     --max-width: 1400px;
+
+    --status-transit-bg: #fff6d1;
+    --status-transit-text: #e17f0f;
+    --status-delivered-bg: #d3ffec;
+    --status-delivered-text: #0b9d5e;
 }
 
+/* === RESET === */
 * {
     margin: 0;
     padding: 0;
@@ -67,7 +75,7 @@ body {
     }
 }
 
-/* Header & Navigation */
+/* === HEADER === */
 .header {
     position: sticky;
     top: 0;
@@ -190,7 +198,6 @@ body {
     color: var(--brand-color-red);
 }
 
-/* Mobile Controls */
 .mobile-controls {
     display: flex;
     align-items: center;
@@ -224,7 +231,7 @@ body {
     display: flex;
 }
 
-/* Button Styles */
+/* === BUTTONS === */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -267,7 +274,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* Hero Section */
+/* === HERO === */
 .hero {
     padding-top: 50px;
     padding-bottom: 80px;
@@ -291,7 +298,7 @@ body {
     display: grid;
     grid-template-columns: 100%;
     gap: 40px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
@@ -305,6 +312,23 @@ body {
     .hero-grid {
         gap: 80px;
     }
+}
+
+.hero-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .hero-heading {
+        padding-top: 2rem;
+    }
+}
+
+.hero-tracking-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .hero-btn-group {
@@ -369,7 +393,7 @@ body {
     text-underline-offset: 3px;
 }
 
-/* Tracking card */
+/* === TRACKING CARD === */
 .tracking-card {
     background-color: var(--card-bg);
     padding: 24px;
@@ -475,7 +499,7 @@ body {
     margin-right: 6px;
 }
 
-/* Hero stats */
+/* === MINI STATS === */
 .hero-mini-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -557,4 +581,115 @@ body {
         font-size: 0.82rem;
         margin-top: 4px;
     }
+}
+
+/* === TRACKING RESULT === */
+.tracking-result {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--bg-color);
+    padding: 12px 16px;
+    border-radius: 12px;
+}
+
+.status-header strong {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-badge.in-transit {
+    background-color: var(--status-transit-bg);
+    color: var(--status-transit-text);
+}
+
+.status-badge.delivered {
+    background-color: var(--status-delivered-bg);
+    color: var(--status-delivered-text);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    padding-left: 8px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 15px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid var(--border-color);
+    flex-shrink: 0;
+    margin-top: 2px;
+    z-index: 1;
+}
+
+.timeline-item.completed .timeline-dot {
+    background-color: var(--brand-color-red);
+    border-color: var(--brand-color-red);
+}
+
+.timeline-item.active .timeline-dot {
+    background-color: #ffffff;
+    border-color: var(--brand-color-red);
+}
+
+.timeline-content h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.timeline-content span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.not-found-msg {
+    padding: 14px 16px;
+    background-color: var(--red-primary-light);
+    border: 1px solid var(--brand-color-red);
+    border-radius: 12px;
+    color: var(--brand-color-red);
+    font-size: 0.9rem;
+}
+
+.not-found-msg strong {
+    display: block;
+    margin-bottom: 4px;
 }
