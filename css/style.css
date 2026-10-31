@@ -1659,3 +1659,153 @@ body {
     font-weight: 700;
     color: var(--text-dark);
 }
+
+/* === APP DOWNLOAD SECTION === */
+.app-download-section {
+    background-color: var(--brand-color-white);
+    width: 100%;
+    padding: 100px 0 120px 0;
+}
+
+.app-download-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 36px 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .app-download-card {
+        padding: 50px 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .app-download-card {
+        grid-template-columns: 1.2fr 0.8fr;
+        padding: 60px 70px;
+        gap: 60px;
+    }
+}
+
+.app-download-content h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .app-download-content h2 {
+        font-size: 2.85rem;
+    }
+}
+
+.app-download-content h2 span {
+    color: var(--brand-color-red);
+    display: inline-block;
+}
+
+.app-download-content p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 580px;
+}
+
+@media (min-width: 768px) {
+    .app-download-content p {
+        font-size: 1.15rem;
+    }
+}
+
+.app-download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+@media (min-width: 480px) {
+    .app-download-buttons {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+.app-store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--brand-color-black);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.app-store-btn:hover {
+    background-color: var(--brand-color-red);
+    transform: translateY(-2px);
+}
+
+.app-store-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.btn-subtitle {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.btn-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.app-download-media {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+@media (min-width: 1024px) {
+    .app-download-media {
+        max-width: 100%;
+    }
+}
+
+.app-download-image {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+    display: block;
+}
