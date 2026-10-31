@@ -41,6 +41,7 @@ ParcelPilot/
 │   ├── icons/
 │   └── images/
 └── README.md
+└── README.cs.md
 ```
 
 ## Interaktivní funkce
