@@ -1,5 +1,7 @@
 [Read in English](README.md) | [Číst v češtině](README.cs.md)
 
+<img width="1922" height="696" alt="parcelpilot-banner-background" src="https://github.com/user-attachments/assets/9e741713-36c7-417d-b482-ee53e1681eeb" />
+
 # ParcelPilot 📦
 
 A fictional logistics and delivery service website created as a personal practice project.
