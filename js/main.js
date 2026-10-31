@@ -105,14 +105,50 @@ function trackparcel() {
     resultBox.style.display = 'block';
 }
 
+/* === CALCULATOR === */
+function calculatePrice() {
+    const weightInput = document.getElementById('calcWeight');
+    const typeSelect = document.getElementById('calcType');
+    const fromSelect = document.getElementById('calcFrom');
+    const toSelect = document.getElementById('calcTo');
+    const resultPrice = document.getElementById('resultPrice');
+    const resultTime = document.getElementById('resultTime');
+
+    if (!weightInput || !typeSelect || !fromSelect || !toSelect) return;
+
+    const weight = parseFloat(weightInput.value.replace(',', '.')) || 1;
+    const type = typeSelect.value;
+    const from = fromSelect.value;
+    const to = toSelect.value;
+
+    if (from === to) {
+        alert('Město odeslání a určení se nemohou shodovat.');
+        return;
+    }
+
+    const typeMultipliers = { standard: 1, express: 1.3, sameDay: 1.6 };
+    const deliveryTimes = { standard: 'Zítra do 14:00', express: 'Dnes do 18:00', sameDay: 'Dnes do 4 hodin' };
+
+    const price = Math.round((89 + weight * 18) * (typeMultipliers[type] || 1));
+
+    if (resultPrice) resultPrice.textContent = price + ' Kč';
+    if (resultTime) resultTime.textContent = 'Doručení: ' + (deliveryTimes[type] || 'Standardní');
+}
+
 /* === INIT LISTENERS === */
 document.addEventListener('DOMContentLoaded', () => {
     const trackBtn = document.getElementById('trackBtn');
+    const calcBtn = document.getElementById('calcBtn');
     const trackingInput = document.getElementById('trackingInput');
 
     if (trackBtn) {
         trackBtn.addEventListener('click', trackparcel);
     }
+    
+    if (calcBtn) {
+        calcBtn.addEventListener('click', calculatePrice);
+    }
+
     if (trackingInput) {
         trackingInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
