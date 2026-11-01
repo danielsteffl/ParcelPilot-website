@@ -58,5 +58,7 @@ https://danielsteffl.github.io/ParcelPilot-website/
 You can explore the visual design for this project on my Behance:
 https://www.behance.net/gallery/257771351/PARCELPILOT-LOGO-SHOWCASE
 
+## Future Plans
+Expand the website by adding new pages, including customer support, frequently asked questions (FAQ), and more.
 
 Made as a personal web development practice project.

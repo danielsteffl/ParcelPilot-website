@@ -58,5 +58,7 @@ https://danielsteffl.github.io/ParcelPilot-website/
 Grafické návrhy pro tento můj projekt si můžete prohlédnout na mém Behance:
 https://www.behance.net/gallery/257771351/PARCELPILOT-LOGO-SHOWCASE
 
+## Plány do budoucna
+Rozšířit webovku o další stránky, jako je například podpora, často kladené dotazy apod.
 
 Vytvořeno jako osobní projekt pro webový vývoj.
