@@ -22,11 +22,11 @@
     <!-- === HEADER === -->
     <header class="header">
         <div class="container">
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Hlavní navigace">
                 <!-- === LOGO === -->
-                <a href="#" class="logo">
+                <a href="#" class="logo" aria-label="Domovská stránka ParcelPilotu">
                     <div class="logo-icon">
-                        <img src="./images/icons/transparent_red_secondarylogo.svg" alt="primary-logo">
+                        <img src="./images/icons/transparent_red_secondarylogo.svg" alt="ParcelPilot logo">
                     </div>
                 </a>
 
@@ -37,7 +37,7 @@
                     <a href="#aplikace" class="btn-brand">
                         <span>Stáhnout aplikaci</span>
                     </a>
-                    <button class="btn-profile" title="Uživatelský účet">
+                    <button class="btn-profile" aria-label="Uživatelský účet" title="Uživatelský účet">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
@@ -48,7 +48,7 @@
                 <!-- === MOBILE CONTROLS === -->
                 <div class="mobile-controls">
                     <a href="#aplikace" class="btn-brand mobile-brand-btn">Stáhnout aplikaci</a>
-                    <button id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-label="Open menu">
+                    <button id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-label="Otevřít menu">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -60,8 +60,8 @@
 
             <!-- === MOBILE MENU === -->
             <div id="mobile-menu" class="mobile-menu">
-                <a href="#" class="nav-link">Kde je moje zásilka</a>
-                <a href="#" class="nav-link">Zákaznická podpora</a>
+                <a href="#hero-sledovani" class="nav-link">Kde je moje zásilka</a>
+                <a href="#podpora" class="nav-link">Zákaznická podpora</a>
             </div>
         </div>
     </header>
@@ -89,18 +89,18 @@
                         </div>
                         
                         <div class="tracking-input-group">
-                            <input type="text" id="trackingInput" placeholder="např. PP-1001-CZ" />
+                            <input type="text" id="trackingInput" aria-label="Číslo zásilky" placeholder="např. PP-1001-CZ" />
                             <button class="btn btn-primary" id="trackBtn">Hledat</button>
                         </div>
                         
                         <div class="sample-hints-wrapper">
                             Vyzkoušet z ukázky: 
-                            <span class="sample-tag" onclick="quicktrack('PP-1001-CZ')">PP-1001-CZ</span>
-                            <span class="sample-tag" onclick="quicktrack('PP-2002-CZ')">PP-2002-CZ</span>
+                            <button type="button" class="sample-tag" aria-label="Vyzkoušet zásilku PP-1001-CZ" onclick="quicktrack('PP-1001-CZ')">PP-1001-CZ</button>
+                            <button type="button" class="sample-tag" aria-label="Vyzkoušet zásilku PP-2002-CZ" onclick="quicktrack('PP-2002-CZ')">PP-2002-CZ</button>
                         </div>
 
                         <!-- === TRACKING RESULT === -->
-                        <div id="trackingResult" class="tracking-result" style="display: none;"></div>
+                        <div id="trackingResult" class="tracking-result" style="display: none;" aria-live="polite"></div>
                     </div>
 
                     <!-- === MINI STATS === -->
@@ -202,7 +202,7 @@
                             </svg>
                         </div>
                         <h3>Doručení do PilotBoxu</h3>
-                        <p>Sítě Samoobslužných PilotBoxů dostupných 24/7 po celé republice pro jendoduché vyzvednutí.</p>
+                        <p>Sítě Samoobslužných PilotBoxů dostupných 24/7 po celé republice pro jednoduché vyzvednutí.</p>
                     </div>
                 </div>
             </div>
@@ -297,7 +297,7 @@
                             <p class="calculator-subtitle">Konečná cena včetně DPH</p>
                         </div>
 
-                        <div class="calculator-price-box">
+                        <div class="calculator-price-box" aria-live="polite">
                             <div class="calculator-price" id="resultPrice">134 Kč</div>
                             <p class="calculator-delivery-time" id="resultTime">Doručení: Zítra do 14:00</p>
                         </div>
@@ -369,10 +369,11 @@
                     </div>
                 </div>
                 <div class="how-it-works-banner">
-                    <img src="./images/images/how-it-works-image.jpg" alt="How it works-image" class="how-it-works-image">
+                    <img src="./images/images/how-it-works-image.jpg" alt="Jak funguje odeslání balíku přes ParcelPilot" class="how-it-works-image">
                 </div>
             </div>
         </section>
+
         <!-- === REVIEWS SECTION === -->
         <section class="reviews-section" id="recenze">
             <div class="container">
@@ -383,11 +384,11 @@
 
                 <div class="reviews-layout">
                     <div class="reviews-media">
-                        <img src="./images/images/review-image.jpg" alt="review-image" class="reviews-image">
+                        <img src="./images/images/review-image.jpg" alt="Spokojený zákazník ParcelPilot" class="reviews-image">
                     </div>
                     <div class="reviews-list">
                         <div class="review-card">
-                            <div class="review-rating">★★★★★</div>
+                            <div class="review-rating" aria-label="Hodnocení: 5/5 hvězdiček">★★★★★</div>
                             <p class="review-text">„S ParcelPilotem posílám balíky rodině i přátelům. Doručení do druhého dne funguje naprosto bezchybně.“</p>
                             <div class="review-author">
                                 <div class="review-avatar">
@@ -400,7 +401,7 @@
                         </div>
 
                         <div class="review-card">
-                            <div class="review-rating">★★★★★</div>
+                            <div class="review-rating" aria-label="Hodnocení: 5/5 hvězdiček">★★★★★</div>
                             <p class="review-text">„Líbí se mi síť samoobslužných boxů, jeden mám dokonce před domem. Prostě jen přijdu, naskenuji kód a je vyřízeno. Aplikace je navíc velmi přehledná.“</p>
                             <div class="review-author">
                                 <div class="review-avatar">
@@ -412,7 +413,7 @@
                             </div>
                         </div>
                         <div class="review-card">
-                            <div class="review-rating">★★★★★</div>
+                            <div class="review-rating" aria-label="Hodnocení: 5/5 hvězdiček">★★★★★</div>
                             <p class="review-text">„Rychlá kalkulace ceny předem a pojištění zásilky v ceně mě přesvědčily ke změně dopravce. Určitě budu využívat i nadále.“</p>
                             <div class="review-author">
                                 <div class="review-avatar">
@@ -427,6 +428,7 @@
                 </div>
             </div>
         </section>
+
         <!-- === APP DOWNLOAD SECTION === -->
         <section class="app-download-section" id="aplikace">
             <div class="container">
@@ -437,7 +439,7 @@
                         
                         <div class="app-download-buttons">
                             <a href="#" class="app-store-btn" aria-label="Stáhnout na App Store">
-                                <img src="./images/icons/apple-icon.svg" alt="App Store" class="app-store-icon">
+                                <img src="./images/icons/apple-icon.svg" alt="App Store icon" class="app-store-icon">
                                 <div class="btn-text">
                                     <span class="btn-subtitle">Stáhnout na</span>
                                     <span class="btn-title">App Store</span>
@@ -445,7 +447,7 @@
                             </a>
 
                             <a href="#" class="app-store-btn" aria-label="Stáhnout na Google Play">
-                                <img src="./images/icons/google-play-icon.svg" alt="Google Play" class="app-store-icon">
+                                <img src="./images/icons/google-play-icon.svg" alt="Google Play icon" class="app-store-icon">
                                 <div class="btn-text">
                                     <span class="btn-subtitle">Získat na</span>
                                     <span class="btn-title">Google Play</span>
@@ -455,29 +457,30 @@
                     </div>
 
                     <div class="app-download-media">
-                        <img src="./images/images/app-image.jpg" alt="ParcelPilot mobilní aplikace" class="app-download-image">
+                        <img src="./images/images/app-image.jpg" alt="Ukázka mobilní aplikace ParcelPilot" class="app-download-image">
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <!-- === FOOTER === -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand-col">
-                    <a href="#" class="logo footer-logo">
+                    <a href="#" class="logo footer-logo" aria-label="ParcelPilot domovská stránka">
                         <div class="logo-icon">
                             <img src="./images/icons/transparent_red_secondarylogo.svg" alt="ParcelPilot logo">
                         </div>
                     </a>
                     <p class="footer-desc">Logistická platforma pro rychlé doručení, chytré sledování a maximální péči o vaše zásilky.</p>
                     <div class="footer-socials">
-                        <a href="#" aria-label="Facebook">
-                            <img src="./images/icons/facebook-icon.svg" alt="Facebook" class="social-icon">
+                        <a href="#" aria-label="Facebook ParcelPilot">
+                            <img src="./images/icons/facebook-icon.svg" alt="" class="social-icon">
                         </a>
-                        <a href="#" aria-label="Instagram">
-                            <img src="./images/icons/instagram-icon.svg" alt="Instagram" class="social-icon">
+                        <a href="#" aria-label="Instagram ParcelPilot">
+                            <img src="./images/icons/instagram-icon.svg" alt="" class="social-icon">
                         </a>
                     </div>
                 </div>
