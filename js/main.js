@@ -156,4 +156,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Nalezení všech zatím nefunkčních odkazů apod. a přidání alertu
+    const emptyLinks = document.querySelectorAll('a[href="#"], button.btn-profile');
+
+    emptyLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            alert('Tato funkce není dostupná. Prozatím je pouze ukázková.');
+        });
+    });
 });
